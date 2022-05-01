@@ -36,8 +36,7 @@ const books = [
 const resolvers = {
   Query: {
     books: (_, args) => {
-      const title = args.title;
-      console.log(args);
+      const { title } = args;
 
       if (title) {
         return books.filter((book) =>
